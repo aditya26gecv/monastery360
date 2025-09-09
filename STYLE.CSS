@@ -2,7 +2,7 @@
 * { margin:0; padding:0; box-sizing:border-box; }
 
 /* ---------------- Navigation ---------------- */
-nav { display:flex; align-items:center; justify-content:space-between; background:#B9E4FA; padding:10px 20px; position:relative;}
+nav { z-index:999; display:flex; align-items:center; justify-content:space-between; background:#B9E4FA; padding:10px 20px; position:relative;}
 .logo img { height:45px; border-radius:0 0 10px 0;}
 .menu { display:flex; flex:1; justify-content:space-between; align-items:center; }
 .menu-left, .menu-right { display:flex; list-style:none; flex:1; justify-content:space-evenly; }
@@ -366,3 +366,4 @@ nav ul li { position:relative; }
   font-size: 13px;
   color: #888;
 }
+
