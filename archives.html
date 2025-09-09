@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Monastery 360 - Digital Archives</title>
+  <style>
+    body {
+      font-family: "Segoe UI", Arial, sans-serif;
+      margin: 0;
+      background: #f8f9fa;
+      color: #333;
+    }
+    header {
+      background: linear-gradient(135deg, #6b4226, #d4a373);
+      color: white;
+      padding: 30px 20px;
+      text-align: center;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.3);
+    }
+    header h1 {
+      margin: 0;
+      font-size: 34px;
+      letter-spacing: 1px;
+    }
+    header p {
+      margin: 8px 0 0;
+      font-size: 16px;
+      opacity: 0.9;
+    }
+    header a {
+      position: absolute;
+      top: 20px;
+      left: 20px;
+      text-decoration: none;
+      color: #fff;
+      background: rgba(0,0,0,0.4);
+      padding: 8px 12px;
+      border-radius: 6px;
+      font-size: 14px;
+      transition: background 0.3s;
+    }
+    header a:hover {
+      background: rgba(0,0,0,0.7);
+    }
+    .section {
+      max-width: 1200px;
+      margin: 40px auto;
+      padding: 0 20px;
+    }
+    .section h2 {
+      font-size: 28px;
+      color: #6b4226;
+      border-left: 6px solid #d4a373;
+      padding-left: 12px;
+      margin-bottom: 20px;
+    }
+    .archive-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+      gap: 20px;
+    }
+    .archive-card {
+      background: #fff;
+      border-radius: 12px;
+      overflow: hidden;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.15);
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+    }
+    .archive-card:hover {
+      transform: translateY(-6px);
+      box-shadow: 0 8px 18px rgba(0,0,0,0.25);
+    }
+    .archive-card img {
+      width: 100%;
+      height: 200px;
+      object-fit: cover;
+      border-bottom: 3px solid #d4a373;
+    }
+    .archive-card .caption {
+      padding: 15px;
+      text-align: center;
+    }
+    .archive-card .caption h3 {
+      margin: 0;
+      font-size: 18px;
+      color: #6b4226;
+    }
+    .archive-card .caption p {
+      font-size: 14px;
+      margin-top: 6px;
+      color: #555;
+    }
+    footer {
+      text-align: center;
+      padding: 20px;
+      background: #6b4226;
+      color: white;
+      margin-top: 40px;
+    }
+  </style>
+</head>
+<body>
+
+  <header>
+    <a href="SIH.HTML">⬅ Back to Home</a>
+    <h1>📜 Digital Archives</h1>
+    <p>Preserving manuscripts, murals, and historical treasures of Sikkim’s monasteries</p>
+  </header>
+
+  <!-- Manuscripts Section -->
+  <div class="section">
+    <h2>📖 Ancient Manuscripts</h2>
+    <div class="archive-grid">
+      <div class="archive-card">
+        <img src="manuscript1.jpg" alt="Manuscript 1">
+        <div class="caption">
+          <h3>Sacred Texts</h3>
+          <p>Digitized palm-leaf manuscripts with Buddhist scriptures.</p>
+        </div>
+      </div>
+      <div class="archive-card">
+        <img src="manuscript2.jpg" alt="Manuscript 2">
+        <div class="caption">
+          <h3>Handwritten Scrolls</h3>
+          <p>Rare scrolls written by monks centuries ago.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Murals Section -->
+  <div class="section">
+    <h2>🎨 Monastery Murals</h2>
+    <div class="archive-grid">
+      <div class="archive-card">
+        <img src="mural1.jpg" alt="Mural 1">
+        <div class="caption">
+          <h3>Wall Art</h3>
+          <p>Colorful murals depicting Buddhist deities.</p>
+        </div>
+      </div>
+      <div class="archive-card">
+        <img src="mural2.jpg" alt="Mural 2">
+        <div class="caption">
+          <h3>Restored Murals</h3>
+          <p>Digitally restored murals from ancient monasteries.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Historical Documents Section -->
+  <div class="section">
+    <h2>📂 Historical Documents</h2>
+    <div class="archive-grid">
+      <div class="archive-card">
+        <img src="document1.jpg" alt="Historical Document">
+        <div class="caption">
+          <h3>Royal Decrees</h3>
+          <p>Preserved edicts from Sikkim’s Chogyal kings.</p>
+        </div>
+      </div>
+      <div class="archive-card">
+        <img src="document2.jpg" alt="Old Records">
+        <div class="caption">
+          <h3>Monastic Records</h3>
+          <p>Handwritten records of rituals and ceremonies.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <footer>
+    © 2025 Monastery 360 | Digital Preservation of Sikkim’s Heritage
+  </footer>
+
+</body>
+</html>

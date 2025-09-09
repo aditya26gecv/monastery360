@@ -1,0 +1,400 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>MONASTERY 360</title>
+  <link rel="stylesheet" href="STYLE.CSS">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+
+
+</head>
+<body>
+
+<!-- ---------------- Navigation ---------------- -->
+<nav>
+  <input type="checkbox" id="menu-toggle">
+  <div class="menu">
+    <!-- LEFT MENU -->
+    <ul class="menu-left">
+      <li><a href="about.html">About</a></li>
+      <li class="dropdown">
+        <a href="#">Services</a>
+        <div class="dropdown-content">
+          <a href="#">Virtual Tours</a>
+          <a href="#">Guided Visits</a>
+          <a href="#">Cultural Programs</a>
+        </div>
+      </li>
+      <li><a href="#">Contact</a></li>
+      <li><a href="#">Digital Archives</a></li>
+    </ul>
+
+    <!-- LOGO -->
+    <div class="logo">
+      <img src="navbar logo.png" alt="Logo">
+    </div>
+
+    <!-- RIGHT MENU -->
+    <ul class="menu-right">
+      <li><a href="gallery.html">Gallery</a></li>
+      <li class="dropdown">
+        <a href="#">Events</a>
+        <div class="dropdown-content">
+          <a href="#">Upcoming Festivals</a>
+          <a href="#">Workshops</a>
+          <a href="#">Community Gatherings</a>
+        </div>
+      </li>
+      <li><a href="map.html">Map</a></li>
+      <li><a href="#">FAQ</a></li>
+      <li class="dropdown">
+        <a href="#">More</a>
+        <div class="dropdown-content">
+          <a href="#">Blog</a>
+          <a href="#">Resources</a>
+          <a href="#">Partners</a>
+        </div>
+      </li>
+    </ul>
+  </div>
+  <label for="menu-toggle" class="menu-btn">&#9776;</label>
+</nav>
+
+<!-- ---------------- AI Semantic Search ---------------- -->
+<div class="ai-search-container">
+  <input type="text" id="aiSearchInput" placeholder="Search Monasteries, Archives, Events...">
+  <button onclick="performAISearch()">🔍 Search</button>
+</div>
+<div id="aiSearchResults"></div>
+
+<!-- ---------------- Content 1: About & Mission ---------------- -->
+<div class="content1">
+  <div class="info-box">
+    <h2>About Sikkim</h2>
+    <p>
+      Sikkim, nestled in the lap of the Himalayas, is home to over 200 monasteries.
+      The state is famous for its serene landscapes, Buddhist culture, and rich
+      spiritual heritage that blends seamlessly with nature.
+    </p>
+  </div>
+  <div class="info-box">
+    <h2>Our Mission</h2>
+    <p>
+      Monastery 360 is dedicated to digitally preserving and showcasing the monasteries
+      of Sikkim. Through immersive experiences, we connect travelers and researchers
+      with the cultural treasures of the Himalayas.
+    </p>
+  </div>
+</div>
+
+<!-- ---------------- Slideshow ---------------- -->
+ <!-- ---------------- Slideshow ---------------- -->
+<div class="slideshow-container">
+  <!-- Slides (unique monasteries only) -->
+  <div class="mySlides">
+    <a href="https://en.wikipedia.org/wiki/Ralang_Monastery" target="_blank">
+      <img src="ralong-monastery.jpg" alt="Ralang Monastery">
+    </a>
+  </div>
+  <div class="mySlides">
+    <a href="https://en.wikipedia.org/wiki/Rumtek_Monastery" target="_blank">
+      <img src="rumtek monastery.jpg" alt="Rumtek Monastery">
+    </a>
+  </div>
+  <div class="mySlides">
+    <a href="https://en.wikipedia.org/wiki/Enchey_Monastery" target="_blank">
+      <img src="enchey monastery.jpg" alt="Enchey Monastery">
+    </a>
+  </div>
+  <div class="mySlides">
+    <a href="https://en.wikipedia.org/wiki/Pemayangtse_Monastery" target="_blank">
+      <img src="pegmantysse-monastery.jpg" alt="Pemayangtse Monastery">
+    </a>
+  </div>
+  <div class="mySlides">
+    <a href="https://en.wikipedia.org/wiki/Karthok_Monastery" target="_blank">
+      <img src="kartok monastery.jpg" alt="Karthok Monastery">
+    </a>
+  </div>
+  <div class="mySlides">
+    <a href="https://en.wikipedia.org/wiki/Phodong_Monastery" target="_blank">
+      <img src="PHONDONG1 MONASTERY.jpg" alt="Phodong Monastery">
+    </a>
+  </div>
+  <div class="mySlides">
+    <a href="https://en.wikipedia.org/wiki/Phensang_Monastery" target="_blank">
+      <img src="phensang-monastery.jpg" alt="Phensang Monastery">
+    </a>
+  </div>
+
+  <!-- Arrows -->
+  <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+  <a class="next" onclick="plusSlides(1)">&#10095;</a>
+</div>
+
+<!-- Dots -->
+<div class="dots">
+  <span class="dot" onclick="currentSlide(1)"></span>
+  <span class="dot" onclick="currentSlide(2)"></span>
+  <span class="dot" onclick="currentSlide(3)"></span>
+  <span class="dot" onclick="currentSlide(4)"></span>
+  <span class="dot" onclick="currentSlide(5)"></span>
+  <span class="dot" onclick="currentSlide(6)"></span>
+  <span class="dot" onclick="currentSlide(7)"></span>
+</div>
+
+<!-- ---------------- Content 3: Info Cards + Tourist Sections ---------------- -->
+<div class="content3">
+  <section class="info-section">
+    <h2>Explore Monasteries Digitally</h2>
+    <p>
+      With <strong>Monastery 360</strong>, we aim to bridge tradition and technology.
+      By preserving ancient monasteries through immersive digital solutions,
+      our platform provides access to heritage, culture, and spirituality like never before.
+    </p>
+    <div class="info-cards">
+      <div class="card">
+        <h3>📚 Digital Archives</h3>
+        <p>Access a growing collection of scanned manuscripts, murals, and historical documents.</p>
+      </div>
+      <div class="card">
+        <h3>🌏 Virtual Tours</h3>
+        <p>Take immersive 360° tours of famous monasteries and custom photospheres for all sites.</p>
+      </div>
+      <div class="card">
+        <h3>🤖 AI-Powered Search</h3>
+        <p>Explore monasteries, archives, and events with semantic search understanding your intent.</p>
+      </div>
+      <div class="card">
+        <h3>🎭 Cultural Programs</h3>
+        <p>Stay updated on festivals, workshops, and spiritual teachings in Sikkim monasteries.</p>
+      </div>
+      <div class="card">
+        <h3>🗺️ Travel Assistance</h3>
+        <p>Plan journeys efficiently with maps, routes, and local transport guidance.</p>
+      </div>
+      <div class="card">
+        <h3>🍽️ Local Amenities</h3>
+        <p>Discover nearby restaurants, cafes, accommodations, and medical facilities.</p>
+      </div>
+      <div class="card">
+        <h3>💡 Tips for Visitors</h3>
+        <p>Learn about monastery etiquette, weather tips, and cultural insights.</p>
+      </div>
+    </div>
+  </section>
+</div>
+ <!-- ---------------- Hidden Gems Section ---------------- -->
+<div class="hidden-gems">
+  <section class="info-section">
+    <h2>Hidden Gems of Sikkim</h2>
+    <p>
+      Explore Sikkim’s secret natural wonders—pristine lakes, hidden valleys, and
+      untouched trekking paths. Discover the beauty off the beaten track!
+    </p>
+
+    <div class="hidden-gems-grid">
+      <!-- Card 1 -->
+      <div class="hidden-gem-card">
+        <a href="https://example.com/gem1" target="_blank">
+          <img src="PRISTINE1 LAKE.jpg" alt="Pristine Lakes">
+          <div class="card-content">
+            <h3>🏞️ Pristine Lakes</h3>
+            <p>Crystal-clear lakes hidden in the valleys, perfect for nature photography and meditation.</p>
+          </div>
+        </a>
+      </div>
+
+      <!-- Card 2 -->
+      <div class="hidden-gem-card">
+        <a href="https://example.com/gem2" target="_blank">
+          <img src="VALLEY1 IMAGE.jpg" alt="Secret Valleys">
+          <div class="card-content">
+            <h3>🌄 Secret Valleys</h3>
+            <p>Discover remote valleys with untouched landscapes and vibrant flora and fauna.</p>
+          </div>
+        </a>
+      </div>
+
+      <!-- Card 3 -->
+      <div class="hidden-gem-card">
+        <a href="https://example.com/gem3" target="_blank">
+          <img src="WATERFALL IMAGE.jpg" alt="Hidden Waterfalls">
+          <div class="card-content">
+            <h3>💧 Hidden Waterfalls</h3>
+            <p>Experience the serenity of cascading waterfalls tucked away from the tourist trail.</p>
+          </div>
+        </a>
+      </div>
+
+      <!-- Card 4 -->
+      <div class="hidden-gem-card">
+        <a href="https://example.com/gem4" target="_blank">
+          <img src="OFFBEAT TREK IMAGE.jpg" alt="Offbeat Treks">
+          <div class="card-content">
+            <h3>🥾 Offbeat Treks</h3>
+            <p>Explore trekking routes that take you through untouched wilderness and scenic vistas.</p>
+          </div>
+        </a>
+      </div>
+    </div>
+  </section>
+</div>
+
+ <!-- ---------------- FAQ Section ---------------- -->
+<div class="faq-section">
+  <h2>Frequently Asked Questions</h2>
+  <div class="faq-container">
+
+    <div class="faq-item">
+      <button class="faq-question">1. What is Monastery 360?</button>
+      <div class="faq-answer">
+        <p>Monastery 360 is a digital platform that preserves and showcases the monasteries of Sikkim, offering virtual tours, archives, and cultural insights for tourists, researchers, and spiritual seekers.</p>
+      </div>
+    </div>
+
+    <div class="faq-item">
+      <button class="faq-question">2. How can I explore hidden gems of Sikkim?</button>
+      <div class="faq-answer">
+        <p>Our Hidden Gems section highlights secret lakes, valleys, waterfalls, and trekking paths. Each item has an external link or guide for detailed exploration.</p>
+      </div>
+    </div>
+
+    <div class="faq-item">
+      <button class="faq-question">3. Are virtual tours free to access?</button>
+      <div class="faq-answer">
+        <p>Basic virtual tours are free for all users. Premium immersive experiences may require a subscription for full access.</p>
+      </div>
+    </div>
+
+    <div class="faq-item">
+      <button class="faq-question">4. Can I download monastery resources or images?</button>
+      <div class="faq-answer">
+        <p>Some digital archives allow downloads for educational or research purposes. Check individual items for permissions and terms of use.</p>
+      </div>
+    </div>
+
+    <div class="faq-item">
+      <button class="faq-question">5. Is the platform mobile-friendly?</button>
+      <div class="faq-answer">
+        <p>Yes! Monastery 360 is fully responsive and works seamlessly on mobile devices, tablets, and desktops.</p>
+      </div>
+    </div>
+
+    <div class="faq-item">
+      <button class="faq-question">6. Can I contribute or suggest a monastery?</button>
+      <div class="faq-answer">
+        <p>You can submit new monasteries, hidden gems, or cultural resources through our Contact page. Submissions are reviewed before inclusion.</p>
+      </div>
+    </div>
+
+    <div class="faq-item">
+      <button class="faq-question">7. How often is the content updated?</button>
+      <div class="faq-answer">
+        <p>We regularly update monastery details, events, and hidden gems to provide accurate and fresh information to our users.</p>
+      </div>
+    </div>
+
+    <div class="faq-item">
+      <button class="faq-question">8. Is there support for multiple languages?</button>
+      <div class="faq-answer">
+        <p>Currently, the platform is in English. We plan to introduce multiple languages to cater to international users in the future.</p>
+      </div>
+    </div>
+
+    <div class="faq-item">
+      <button class="faq-question">9. Are virtual tours accessible for visually impaired users?</button>
+      <div class="faq-answer">
+        <p>Textual descriptions and audio guides are available for major virtual tours. Accessibility improvements are ongoing to make all tours inclusive.</p>
+      </div>
+    </div>
+
+    <div class="faq-item">
+      <button class="faq-question">10. How can I report outdated or incorrect information?</button>
+      <div class="faq-answer">
+        <p>You can report any issues using the 'Report' button on each monastery page or contact our support team directly.</p>
+      </div>
+    </div>
+
+  </div>
+</div>
+<!-- ---------------- JavaScript (Slideshow) ---------------- -->
+<script>
+let slideIndex = 0, slideTimer;
+showSlides();
+function showSlides() {
+  let slides = document.getElementsByClassName("mySlides");
+  let dots = document.getElementsByClassName("dot");
+  if (!slides.length) return;
+  for (let i = 0; i < slides.length; i++) slides[i].style.display = "none";
+  slideIndex++;
+  if (slideIndex > slides.length) slideIndex = 1;
+  slides[slideIndex-1].style.display = "block";
+  if(dots[slideIndex-1]) dots[slideIndex-1].className += " active";
+  slideTimer = setTimeout(showSlides, 4000);
+}
+function currentSlide(n){ clearTimeout(slideTimer); slideIndex=n-1; showSlides();}
+function plusSlides(n){ clearTimeout(slideTimer); slideIndex+=n-1; showSlides();}
+document.addEventListener('keydown', e => { if(e.key==='ArrowLeft') plusSlides(-1); else if(e.key==='ArrowRight') plusSlides(1); });
+</script>
+<script>
+const faqItems = document.querySelectorAll('.faq-item');
+
+faqItems.forEach(item => {
+  const question = item.querySelector('.faq-question');
+  question.addEventListener('click', () => {
+    // Close other open items
+    faqItems.forEach(i => {
+      if (i !== item) i.classList.remove('active');
+    });
+    // Toggle current item
+    item.classList.toggle('active');
+  });
+});
+</script>
+ <!-- ---------------- Footer ---------------- -->
+<footer class="footer">
+  <div class="footer-content">
+
+    <div class="footer-section about">
+      <h3>Monastery 360</h3>
+      <p>Digitally preserving and showcasing the monasteries of Sikkim for tourists, researchers, and spiritual seekers.</p>
+    </div>
+
+    <div class="footer-section links">
+      <h4>Quick Links</h4>
+      <ul>
+        <li><a href="about.html">About</a></li>
+        <li><a href="gallery.html">Gallery</a></li>
+        <li><a href="map.html">Map</a></li>
+        <li><a href="#">FAQ</a></li>
+        <li><a href="#">Contact</a></li>
+      </ul>
+    </div>
+
+    <div class="footer-section contact">
+      <h4>Contact</h4>
+      <p>Email: info@monastery360.com</p>
+      <p>Phone: +91 9142689175</p>
+      <p>Sikkim, India</p>
+    </div>
+
+    <div class="footer-section social">
+  <h4>Follow Us</h4>
+  <div class="social-icons">
+    <a href=" https://www.instagram.com/mishra_aditya_0817/" target="_blank"><i class="fab fa-instagram"></i></a>
+    <a href="https://x.com/KumarAditya2607" target="_blank"><i class="fab fa-x-twitter"></i></a>
+    <a href=" https://www.linkedin.com/in/aditya-kumar-745373360/" target="_blank"><i class="fab fa-linkedin"></i></a>
+  </div>
+</div>
+
+  </div>
+
+  <div class="footer-bottom">
+    <p>© 2025 TEAM ANVAYA. All Rights Reserved.</p>
+  </div>
+</footer>
+
+</body>
+</html>

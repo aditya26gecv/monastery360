@@ -1,0 +1,252 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Monastery 360 - Gallery</title>
+  <style>
+    body {
+      font-family: "Segoe UI", Arial, sans-serif;
+      margin: 0;
+      background: #f9fff9;
+    }
+
+    /* ---------- Animated Nature Header ---------- */
+    header {
+      position: relative;
+      height: 320px;
+      color: white;
+      text-align: center;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      overflow: hidden;
+
+      /* Animated nature gradient */
+      background: linear-gradient(135deg, #2e8b57, #3cb371, #20b2aa, #87ceeb, #98fb98);
+      background-size: 400% 400%;
+      animation: natureGradient 14s ease infinite;
+    }
+
+    @keyframes natureGradient {
+      0% { background-position: 0% 50%; }
+      50% { background-position: 100% 50%; }
+      100% { background-position: 0% 50%; }
+    }
+
+    header .header-text {
+      position: relative;
+      z-index: 1;
+      text-shadow: 2px 2px 8px rgba(0,0,0,0.6);
+    }
+
+    header h1 {
+      margin: 0;
+      font-size: 42px;
+      letter-spacing: 2px;
+    }
+
+    header p {
+      font-size: 18px;
+      margin-top: 8px;
+      opacity: 0.95;
+    }
+
+    header a {
+      position: absolute;
+      top: 20px;
+      left: 20px;
+      color: #fff;
+      text-decoration: none;
+      font-size: 14px;
+      background: rgba(0,0,0,0.4);
+      padding: 8px 12px;
+      border-radius: 6px;
+      transition: background 0.3s;
+      z-index: 2;
+    }
+    header a:hover {
+      background: rgba(0,0,0,0.7);
+    }
+
+    /* ---------- Gallery Sections ---------- */
+    .gallery-section {
+      max-width: 1200px;
+      margin: 50px auto;
+      padding: 40px 20px;
+      border-radius: 18px;
+      box-shadow: 0 6px 18px rgba(0,0,0,0.15);
+    }
+
+    /* Section 1: Nature Greens */
+    .gallery-section:nth-of-type(1) {
+      background: linear-gradient(135deg, #f0fff0, #c8facc, #a7e9af);
+    }
+
+    /* Section 2: Sky Blues */
+    .gallery-section:nth-of-type(2) {
+      background: linear-gradient(135deg, #e6f7ff, #b3ecff, #99e6ff);
+    }
+
+    /* Section 3: Sunlight Warmth */
+    .gallery-section:nth-of-type(3) {
+      background: linear-gradient(135deg, #fff7e6, #ffe6b3, #ffd480);
+    }
+
+    .gallery-section h2 {
+      font-size: 30px;
+      margin-bottom: 25px;
+      color: #2f5233;
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      border-left: 6px solid #228B22;
+      padding-left: 12px;
+    }
+
+    /* ---------- Gallery Grid ---------- */
+    .gallery-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+      gap: 20px;
+    }
+
+    /* ---------- Card Style ---------- */
+    .gallery-card {
+      position: relative;
+      overflow: hidden;
+      border-radius: 14px;
+      box-shadow: 0 6px 14px rgba(0,0,0,0.2);
+      background: #fff;
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+    }
+    .gallery-card:hover {
+      transform: translateY(-6px);
+      box-shadow: 0 10px 24px rgba(0,0,0,0.3);
+    }
+    .gallery-card img {
+      width: 100%;
+      height: 220px;
+      object-fit: cover;
+      border-bottom: 3px solid #228B22;
+    }
+    .gallery-card .caption {
+      padding: 15px;
+      text-align: center;
+    }
+    .gallery-card .caption h3 {
+      margin: 0;
+      font-size: 18px;
+      color: #2f5233;
+    }
+    .gallery-card .caption p {
+      font-size: 14px;
+      margin-top: 6px;
+      color: #555;
+    }
+
+    /* ---------- Responsive ---------- */
+    @media (max-width: 600px) {
+      header h1 { font-size: 28px; }
+      .gallery-card img { height: 180px; }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Hero Header -->
+  <header>
+    <a href="SIH.HTML">⬅ Back to Home</a>
+    <div class="header-text">
+      <h1>🌿 Event Photo Gallery 🌄</h1>
+      <p>Relive our Festivals 🎉, Workshops 🎨, and Community Gatherings 🤝</p>
+    </div>
+  </header>
+
+  <!-- Festivals Section -->
+  <div class="gallery-section">
+    <h2>🎉🌸 Festivals of Joy</h2>
+    <div class="gallery-grid">
+      <div class="gallery-card">
+        <img src="festival1.jpg" alt="Festival Celebration">
+        <div class="caption">
+          <h3>🎊 Colorful Celebration</h3>
+          <p>A vibrant glimpse of Sikkim’s spiritual festivals.</p>
+        </div>
+      </div>
+      <div class="gallery-card">
+        <img src="festival2.jpg" alt="Festival Dance">
+        <div class="caption">
+          <h3>🕺 Monk Dance</h3>
+          <p>Traditional Cham dance performed during Losar.</p>
+        </div>
+      </div>
+      <div class="gallery-card">
+        <img src="festival3.jpg" alt="Colorful Festivities">
+        <div class="caption">
+          <h3>🪔 Lighting & Rituals</h3>
+          <p>Evening rituals filled with prayers and lights.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Workshops Section -->
+  <div class="gallery-section">
+    <h2>🎨📚 Creative Workshops</h2>
+    <div class="gallery-grid">
+      <div class="gallery-card">
+        <img src="workshop1.jpg" alt="Art Workshop">
+        <div class="caption">
+          <h3>🖌️ Art & Craft</h3>
+          <p>Learning traditional Tibetan painting styles.</p>
+        </div>
+      </div>
+      <div class="gallery-card">
+        <img src="workshop2.jpg" alt="Cultural Workshop">
+        <div class="caption">
+          <h3>🌏 Cultural Exchange</h3>
+          <p>Workshops bridging culture and spirituality.</p>
+        </div>
+      </div>
+      <div class="gallery-card">
+        <img src="workshop3.jpg" alt="Learning Session">
+        <div class="caption">
+          <h3>📖 Learning Together</h3>
+          <p>Sessions where monks share wisdom with visitors.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Community Gatherings Section -->
+  <div class="gallery-section">
+    <h2>🤝🏮 Community Gatherings</h2>
+    <div class="gallery-grid">
+      <div class="gallery-card">
+        <img src="community1.jpg" alt="Community Gathering">
+        <div class="caption">
+          <h3>🙏 Unity in Prayer</h3>
+          <p>Communities joining together in peace.</p>
+        </div>
+      </div>
+      <div class="gallery-card">
+        <img src="community2.jpg" alt="Monk Meeting">
+        <div class="caption">
+          <h3>🧘 Spiritual Meetings</h3>
+          <p>Monks gather to chant and meditate together.</p>
+        </div>
+      </div>
+      <div class="gallery-card">
+        <img src="community3.jpg" alt="People Celebration">
+        <div class="caption">
+          <h3>🎶 Shared Joy</h3>
+          <p>Local communities celebrating traditions.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+
+</body>
+</html>

@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Monastery 360 - Virtual Map & Tours</title>
+  <link rel="stylesheet" href="https://unpkg.com/photosphere-viewer@5/dist/photosphere-viewer.css">
+  <style>
+    body {
+      font-family: "Segoe UI", Arial, sans-serif;
+      margin: 0;
+      background: #f8f9fa;
+      color: #333;
+    }
+    header {
+      background: linear-gradient(135deg, #4A90E2, #5AD4A7);
+      color: white;
+      padding: 20px;
+      text-align: center;
+      box-shadow: 0 3px 6px rgba(0,0,0,0.2);
+    }
+    header h1 {
+      margin: 0;
+      font-size: 28px;
+    }
+    header a {
+      display: inline-block;
+      margin-top: 8px;
+      color: #fff;
+      text-decoration: none;
+      font-size: 14px;
+    }
+    .map-controls {
+      max-width: 900px;
+      margin: 25px auto;
+      background: white;
+      padding: 20px;
+      border-radius: 12px;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+      display: flex;
+      flex-wrap: wrap;
+      gap: 15px;
+      justify-content: center;
+    }
+    select, button {
+      padding: 10px 15px;
+      border-radius: 6px;
+      border: 1px solid #ccc;
+      font-size: 16px;
+    }
+    button {
+      background: #4A90E2;
+      color: white;
+      border: none;
+      cursor: pointer;
+      transition: background 0.3s;
+    }
+    button:hover {
+      background: #357ABD;
+    }
+    .map-container {
+      max-width: 1000px;
+      margin: 0 auto 40px auto;
+      border: 3px solid #ddd;
+      border-radius: 12px;
+      overflow: hidden;
+      height: 500px;
+      background: #000;
+    }
+    iframe, .photosphere {
+      width: 100%;
+      height: 100%;
+      border: 0;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>Explore Monasteries on Map & Virtual Tour</h1>
+    <a href="SIH.HTML">⬅ Back to Home</a>
+  </header>
+
+  <!-- Travel Controls -->
+  <div class="map-controls">
+    <label for="to">Select Monastery:</label>
+    <select id="to">
+      <option value="rumtek">Rumtek Monastery</option>
+      <option value="pemayangtse">Pemayangtse Monastery</option>
+      <option value="ralang">Ralang Monastery</option>
+      <option value="enchey">Enchey Monastery</option>
+      <option value="karthok">Karthok Monastery</option>
+    </select>
+    <button onclick="showVirtualTour()">View Virtual Tour</button>
+  </div>
+
+  <!-- Map / Virtual Tour Display -->
+  <div class="map-container" id="tourContainer">
+    <iframe id="mapFrame"
+      src="https://www.google.com/maps?q=Sikkim&z=8&output=embed"
+      allowfullscreen
+      loading="lazy">
+    </iframe>
+  </div>
+
+  <!-- JS Libraries -->
+  <script src="https://unpkg.com/three@0.159.0/build/three.min.js"></script>
+  <script src="https://unpkg.com/photosphere-viewer@5/dist/photosphere-viewer.js"></script>
+  
+  <script>
+    let viewer; // global for PhotoSphereViewer
+
+    function showVirtualTour() {
+      const to = document.getElementById("to").value;
+      const container = document.getElementById("tourContainer");
+      
+      // Reset container
+      container.innerHTML = "";
+
+      if (viewer) {
+        viewer.destroy();
+        viewer = null;
+      }
+
+      if (to === "rumtek") {
+        container.innerHTML = `<iframe src="https://www.google.com/maps/embed?pb=!4v1704300000000!6m8!1m7!1sCAoSLEFGMVFpcE4tTjlHVmJpWUpmM1B1YUdVdE5vTXM2Z0VjRzB1T3BxWTdLZUlU!2m2!1d27.3190!2d88.6216!3f0!4f0!5f0.7820865974627469" allowfullscreen></iframe>`;
+      }
+      else if (to === "pemayangtse") {
+        container.innerHTML = `<iframe src="https://www.google.com/maps/embed?pb=!4v1704300000000!6m8!1m7!1sCAoSLEFGMVFpcFBkTjRpYjZKREd0UnlxeXhNUWh3QmR1YldPbmI2V2NhMFVaR1lN!2m2!1d27.2956!2d88.2392!3f0!4f0!5f0.7820865974627469" allowfullscreen></iframe>`;
+      }
+      else if (to === "ralang") {
+        container.innerHTML = `<iframe src="https://www.google.com/maps/embed?pb=!4v1704300000000!6m8!1m7!1sCAoSLEFGMVFpcE9yWmV1YjZSeHd6U1J0S1Y4bU5XSm9ObmpsM0M3eWlqVXZvZ3Zk!2m2!1d27.3001!2d88.3276!3f0!4f0!5f0.7820865974627469" allowfullscreen></iframe>`;
+      }
+      else if (to === "enchey") {
+        container.innerHTML = `<iframe src="https://www.google.com/maps/embed?pb=!4v1704300000000!6m8!1m7!1sCAoSLEFGMVFpcFBlbk5SRU1ybkI0QWJjV0FzVFlUQ2R6dXhycEpuSmZhb0lGa0N3!2m2!1d27.3417!2d88.6134!3f0!4f0!5f0.7820865974627469" allowfullscreen></iframe>`;
+      }
+      else if (to === "karthok") {
+        // Photo Sphere fallback
+        const sphereDiv = document.createElement("div");
+        sphereDiv.className = "photosphere";
+        container.appendChild(sphereDiv);
+
+        viewer = new PhotoSphereViewer.Viewer({
+          container: sphereDiv,
+          panorama: "karthok-360.jpg", // replace with your 360° image
+          caption: "Karthok Monastery - 360° Virtual Tour",
+          loadingImg: "https://photo-sphere-viewer-data.netlify.app/assets/photosphere-logo.gif",
+          touchmoveTwoFingers: true,
+          navbar: ["zoom", "fullscreen"]
+        });
+      }
+    }
+  </script>
+</body>
+</html>
